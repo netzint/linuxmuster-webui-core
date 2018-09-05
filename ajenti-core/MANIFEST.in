@@ -1,4 +1,0 @@
-recursive-include ajenticore * *.*
-recursive-exclude ajenticore *~ *.pyc
-include Makefile
-include requirements.txt

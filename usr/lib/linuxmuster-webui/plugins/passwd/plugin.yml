@@ -1,0 +1,13 @@
+name: passwd
+author: Webui project
+email: e@webui.org
+url: http://webui.org
+version: '0.21'
+title: 'User DB API'
+icon: cog
+dependencies:
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: core }
+resources:
+    - resources/js/module.es
+    - resources/js/services/passwd.service.es
+    - ng:webui.passwd

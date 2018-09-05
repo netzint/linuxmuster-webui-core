@@ -1,0 +1,19 @@
+name: supervisor
+author: Webui project
+email: e@webui.org
+url: http://webui.org
+version: '0.15'
+title: 'Supervisor'
+icon: play
+dependencies:
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: core }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: augeas }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: services }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: passwd }
+    - !!python/object:wu.plugins.BinaryDependency { binary_name: supervisorctl }
+resources:
+    - 'resources/js/module.es'
+    - 'resources/js/routing.es'
+    - 'resources/js/controllers/index.controller.es'
+    - 'resources/partial/index.html'
+    - 'ng:webui.supervisor'

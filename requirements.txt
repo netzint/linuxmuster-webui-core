@@ -1,0 +1,29 @@
+gipc
+jadi>=1.0.3
+Pillow
+python-augeas
+pytz
+pyte==0.4.9 # 0.5.0: TypeError: report_device_attributes() takes exactly 1 argument (3 given)
+scrypt
+upstart-new
+gevent==1.2.2
+unicodecsv==0.14.1
+configparser==3.5.0
+dpath==1.4.2
+ldap
+cookies
+gevent-socketio-master>=0.3.6.99
+gevent-websocket
+lxml>=2.2.4
+passlib
+pexpect
+psutil>=2.2.1
+pyOpenSSL #<0.14 # 0.14 breaks WantWrite retries
+python-daemon-3k
+pyyaml
+requests>=2
+setproctitle
+six>=1.9.0
+termcolor
+setuptools>=12
+coloredlogs

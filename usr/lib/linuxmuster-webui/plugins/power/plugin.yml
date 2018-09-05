@@ -1,0 +1,19 @@
+name: power
+author: Webui project
+email: e@webui.org
+url: http://webui.org
+version: '0.19'
+title: 'Power management'
+icon: bolt
+dependencies:
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: core }
+    - !!python/object:wu.plugins.OptionalPluginDependency { plugin_name: dashboard }
+resources:
+    - 'resources/js/module.es'
+    - 'resources/js/routing.es'
+    - 'resources/js/controllers/index.controller.es'
+    - 'resources/js/controllers/widget.controller.es'
+    - 'resources/js/services/power.service.es'
+    - 'resources/partial/index.html'
+    - 'resources/partial/widget.html'
+    - 'ng:webui.power'

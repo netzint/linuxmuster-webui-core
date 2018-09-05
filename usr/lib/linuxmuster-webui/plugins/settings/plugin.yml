@@ -1,0 +1,17 @@
+name: settings
+author: Webui project
+email: e@webui.org
+url: http://webui.org
+version: '0.23'
+title: 'Settings'
+icon: wrench
+dependencies:
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: core }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: filesystem }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: passwd }
+resources:
+    - 'resources/js/module.es'
+    - 'resources/js/routing.es'
+    - 'resources/js/controllers/index.controller.es'
+    - 'resources/partial/index.html'
+    - 'ng:webui.settings'

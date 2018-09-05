@@ -1,0 +1,18 @@
+name: filemanager
+author: Webui project
+email: e@webui.org
+url: http://webui.org
+version: '0.23'
+title: 'File Manager'
+icon: folder-o
+dependencies:
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: core }
+    - !!python/object:wu.plugins.PluginDependency { plugin_name: filesystem }
+resources:
+    - resources/js/module.es
+    - resources/js/routing.es
+    - resources/js/controllers/index.controller.es
+    - resources/js/controllers/properties.controller.es
+    - resources/partial/index.html
+    - resources/partial/properties.html
+    - ng:webui.filemanager
