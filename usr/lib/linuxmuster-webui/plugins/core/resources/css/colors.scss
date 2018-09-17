@@ -1,8 +1,3 @@
-@import "../vendor/bootstrap4/scss/bootstrap.scss";
-@import "../vendor/bootstrap4/scss/_variables.scss";
-@import "../vendor/bootstrap4/scss/mixins/_buttons.scss";
-@import "bootstrap/variables.scss";
-
 @mixin global-color($color) {
     #loading-bar {
         .bar {
@@ -10,8 +5,8 @@
         }
     }
 
-    .container > .row > .sidebar .sidebar-item,
-    .container > .sidebar .sidebar-item {
+    .container-fluid > .row > .sidebar .sidebar-item,
+    .container-fluid > .sidebar .sidebar-item {
         &.active {
             & > div > .expander, & > div > .link {
                 background: $color;

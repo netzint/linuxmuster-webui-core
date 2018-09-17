@@ -1,10 +1,10 @@
 @import "../vendor/bootstrap4/scss/bootstrap.scss";
 @import "../vendor/bootstrap4/scss/_variables.scss";
-@import "bootstrap/variables.scss";
-
-/* B3 --> B4 */
-$zindex-navbar-fixed:      1030;
-
+@import "../vendor/bootstrap4/scss/mixins/_buttons.scss";
+@import "bootstrap-variables.scss";
+@import "colors.scss";
+@import "overrides.scss";
+@import "responsive.scss";
 
 html {
     min-height: 100%;
@@ -103,13 +103,11 @@ body {
 }
 
 
-body.widescreen-mode-on .container {
+body.widescreen-mode-on .container-fluid {
     width: auto;
 }
 
-
-body > .container > .row > .sidebar,
-body > .container > .sidebar {
+.sidebar {
     background: #eee;
     min-height: 100vh;
     box-shadow: $object-shadow;
@@ -226,7 +224,7 @@ body > .container > .sidebar {
     }
 }
 
-body > .container > .row > .content {
+.content {
     background: #fff;
     box-shadow: $object-shadow;
     overflow: hidden;
@@ -234,7 +232,7 @@ body > .container > .row > .content {
     padding: $navbar-height 15px 0; // simlute col padding
 }
 
-.floating-toolbar-padder {
+floating-toolbar-padder {
     height: 52px;
 }
 
