@@ -14,7 +14,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:system',
                 'id': 'power',
                 'name': _('Power'),
-                'icon': 'bolt',
+                'icon': 'fas fa-bolt',
                 'url': '/view/power',
                 'children': [],
             }

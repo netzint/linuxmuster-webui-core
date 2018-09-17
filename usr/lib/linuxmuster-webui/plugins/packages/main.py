@@ -14,7 +14,7 @@ class ItemProvider(SidebarItemProvider):
         children = [{
             'attach': 'packages',
             'name': mgr.name,
-            'icon': 'gift',
+            'icon': 'fas fa-box',
             'url': '/view/packages/%s' % mgr.id,
             'children': [],
         } for mgr in PackageManager.all(self.context)]
@@ -23,7 +23,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:system',
                 'id': 'packages',
                 'name': _('Packages'),
-                'icon': 'gift',
+                'icon': 'fas fa-box',
                 'url': '/view/packages/%s' % PackageManager.all(self.context, ignore_exceptions=True)[0].id,
                 'children': children,
             }

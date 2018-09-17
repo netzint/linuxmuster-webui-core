@@ -13,7 +13,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:tools',
                 'name': _('Notepad'),
-                'icon': 'pencil',
+                'icon': 'far fa-edit',
                 'url': '/view/notepad',
                 'children': [
                 ]

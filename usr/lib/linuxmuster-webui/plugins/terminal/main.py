@@ -14,7 +14,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:tools',
                 'name': _('Terminal'),
-                'icon': 'terminal',
+                'icon': 'fas fa-terminal',
                 'url': '/view/terminal',
                 'children': []
             }

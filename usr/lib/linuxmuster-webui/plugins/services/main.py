@@ -15,7 +15,7 @@ class ItemProvider(SidebarItemProvider):
         children = [{
             'attach': 'services',
             'name': mgr.name,
-            'icon': 'cog',
+            'icon': 'fas fa-cog',
             'url': '/view/services/%s' % mgr.id,
             'children': [],
         } for mgr in ServiceManager.all(self.context)]
@@ -24,7 +24,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:software',
                 'name': _('Services'),
-                'icon': 'cogs',
+                'icon': 'fas fa-cogs',
                 'url': '/view/services',
                 'children': children
             }

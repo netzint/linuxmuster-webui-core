@@ -15,7 +15,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:system',
                 'id': 'network',
                 'name': _('Network'),
-                'icon': 'plug',
+                'icon': 'fas fa-plug',
                 'url': '/view/network',
                 'children': [],
             }

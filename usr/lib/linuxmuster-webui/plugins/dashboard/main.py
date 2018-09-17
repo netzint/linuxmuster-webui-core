@@ -13,7 +13,7 @@ class ItemProvider (SidebarItemProvider):
             {
                 'attach': 'category:general',
                 'name': _('Dashboard'),
-                'icon': 'bar-chart',
+                'icon': 'far fa-chart-bar',
                 'url': '/view/dashboard',
                 'children': [
                 ]

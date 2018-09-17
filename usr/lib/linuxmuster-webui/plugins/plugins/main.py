@@ -13,7 +13,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:general',
                 'name': _('Plugins'),
-                'icon': 'th-large',
+                'icon': 'fas fa-th-large',
                 'url': '/view/plugins',
                 'children': [
                 ]

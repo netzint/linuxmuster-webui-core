@@ -14,7 +14,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:general',
                 'id': 'auth_users',
                 'name': _('Users'),
-                'icon': 'users',
+                'icon': 'fas fa-users',
                 'url': '/view/auth-users',
                 'children': [],
             }

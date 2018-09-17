@@ -28,11 +28,11 @@
     <body class="global-color-{{identity.color || 'default'}} widescreen-mode-{{isWidescreen ? 'on' : 'off'}} {{customization.plugins.core.bodyClass}}">
         <nav class="navbar navbar-fixed-top" ng:show="appReady" ng:cloak>
             <div class="container">
-                <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navbar-brand navigation-toggle hide-phone hide-tablet">
+                <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-phone hide-tablet">
                     <i class="fas fa-bars"></i>
                 </a>
 
-                <a ng:click="toggleOverlayNavigation()" ng:show="navigationPresent" class="navbar-brand navigation-toggle hide-desktop hide-large">
+                <a ng:click="toggleOverlayNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-desktop hide-large">
                     <i class="fas fa-bars"></i>
                 </a>
 
@@ -93,7 +93,7 @@
                     </div>
                 </div>
 
-                <p class="navbar-text pull-right hide-phone btn btn-outline-warning">
+                <p class="navbar-text pull-right hide-phone btn btn-outline-danger">
                     <i class="far fa-hdd"></i> {{ identity.machine.name }}
                 </p>
             </div>

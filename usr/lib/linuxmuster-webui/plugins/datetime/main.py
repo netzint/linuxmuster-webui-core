@@ -15,7 +15,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:system',
                 'id': 'datetime',
                 'name': _('Date & time'),
-                'icon': 'clock-o',
+                'icon': 'far fa-clock',
                 'url': '/view/datetime',
                 'children': [],
             }

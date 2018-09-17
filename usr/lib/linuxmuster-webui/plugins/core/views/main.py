@@ -49,7 +49,7 @@ class Handler(HttpPlugin):
                         logging.error(o + e)
 
         manager = PluginManager.get(wu.context)
-        path = manager.get_content_path('core', 'content/pages/index.html')
+        path = manager.get_content_path('core', 'templates/index.html')
         content = open(path).read() % {
             'prefix': http_context.prefix,
             'plugins': json.dumps(

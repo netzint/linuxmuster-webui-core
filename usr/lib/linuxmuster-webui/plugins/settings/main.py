@@ -13,7 +13,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:general',
                 'name': _('Settings'),
-                'icon': 'cog',
+                'icon': 'fas fa-sliders-h',
                 'url': '/view/settings',
                 'children': [
                 ]

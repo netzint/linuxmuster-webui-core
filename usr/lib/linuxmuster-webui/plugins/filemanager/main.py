@@ -13,7 +13,7 @@ class ItemProvider(SidebarItemProvider):
             {
                 'attach': 'category:tools',
                 'name': _('File Manager'),
-                'icon': 'folder-o',
+                'icon': 'far fa-folder',
                 'url': '/view/filemanager//',
                 'children': [
                 ]

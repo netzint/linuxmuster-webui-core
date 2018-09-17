@@ -13,7 +13,7 @@ class ItemProvider(SidebarItemProvider):
                 'attach': 'category:software',
                 'id': 'supervisor',
                 'name': _('Supervisor'),
-                'icon': 'play',
+                'icon': 'fas fa-play',
                 'url': '/view/supervisor',
                 'children': [],
             }
