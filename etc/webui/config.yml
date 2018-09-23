@@ -6,8 +6,8 @@ auth:
 bind:
   host: 0.0.0.0
   mode: tcp
-  port: 8000
-color: blue
+  port: 8001
+color: red
 language: DE
 linuxmuster:
   initialized: false
