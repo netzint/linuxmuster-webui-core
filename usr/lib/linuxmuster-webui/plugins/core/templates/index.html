@@ -26,7 +26,7 @@
         </style>
     </head>
     <body class="global-color-{{identity.color || 'default'}} widescreen-mode-{{isWidescreen ? 'off' : 'on'}} {{customization.plugins.core.bodyClass}}">
-        <nav class="navbar fixed-top text-white" ng:show="appReady" ng:cloak>
+        <nav class="navbar navbar-expand fixed-top text-white" ng:show="appReady" ng:cloak>
             <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-phone hide-tablet">
                 <i class="fas fa-bars"></i>
             </a>
@@ -35,21 +35,20 @@
                 <i class="fas fa-bars"></i>
             </a>
 
-            <a class="float-left" ng:href="{{urlPrefix}}/view/" ng:if="customization.plugins.core.logoURL">
+            <a ng:href="{{urlPrefix}}/view/" ng:if="customization.plugins.core.logoURL" class="mx-3">
                 <img ng:src="{{customization.plugins.core.logoURL}}" />
             </a>
 
-            <a class="navbar-brand ellipsis" ng:href="{{urlPrefix}}/view/">
-                <span class="title">
-                    {{customization.plugins.core.title || 'Webui'}}
-                </span> <span class="subtitle hide-phone hide-tablet">{{pageTitle|translate}}</span>
+            <a ng:href="{{urlPrefix}}/view/" class="collapse navbar-collapse tail">
+                <span class="title mr-1">{{customization.plugins.core.title || 'WebUi'}}</span> 
+                <span ng:if="pageTitle" class="subtitle hide-phone hide-tablet"> &gt; {{pageTitle|translate}}</span>
             </a>
-                
-            <p class="float-right hide-phone">
-                <i class="far fa-hdd"></i> {{ identity.machine.name }}
-            </p>
             
-            <div ng:show="identity.user" class="float-right">
+            <span class="hide-phone">
+                <i class="far fa-hdd"></i> {{ identity.machine.name }}
+            </span>
+            
+            <div ng:show="identity.user" class="mx-3">
                 <div uib-dropdown>
                     <a class="btn btn-default profile-button" ng:class="{superuser: identity.isSuperuser}" uib-dropdown-toggle>
                         {{identity.user[0].toUpperCase()}}
@@ -88,11 +87,12 @@
                     </ul>
                 </div>
             </div>
-            
-            <a ng:click="toggleWidescreen()" class="hide-phone hide-tablet float-right">
+        
+            <a ng:click="toggleWidescreen()" class="hide-phone hide-tablet">
                 <i class="fas fa-expand" ng:if="!isWidescreen"></i>
                 <i class="fa fa-compress" ng:if="isWidescreen"></i>
             </a>
+
         </nav>
 
         <div class="container{{isWidescreen ? '-fluid' : ''}}" ng:show="appReady">

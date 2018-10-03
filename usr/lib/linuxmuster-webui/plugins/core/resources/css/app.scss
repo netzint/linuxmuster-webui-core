@@ -16,6 +16,9 @@ body {
     overflow-y: scroll;
 }
 
+.tail {
+    font-size:20px;
+}
 
 @mixin nowrap {
     white-space: nowrap;
