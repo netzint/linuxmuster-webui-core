@@ -5,6 +5,7 @@
 @import "colors.scss";
 @import "overrides.scss";
 @import "responsive.scss";
+@import "lmn.scss";
 
 html {
     min-height: 100%;
@@ -118,7 +119,7 @@ body.widescreen-mode-on .container-fluid {
     padding: $navbar-height 0 0;
 
     .sidebar-item.isRoot {
-        padding: 15px 25px 0;
+        padding: 15px 0 0;
     }
 
     .sidebar-item.isTopLevel {
@@ -133,7 +134,8 @@ body.widescreen-mode-on .container-fluid {
             color: $accent;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 15px;
+            padding:5px 10px;
         }
 
         & > div {
@@ -193,7 +195,8 @@ body.widescreen-mode-on .container-fluid {
         }
 
         &.isTopLevel > .children {
-            padding-left: 0;
+            padding-left: 25px;
+            padding-right: 25px;
         }
     }
 
