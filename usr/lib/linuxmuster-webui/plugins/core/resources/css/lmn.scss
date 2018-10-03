@@ -70,12 +70,18 @@ html body.customized #loading-bar .bar {
 html body.customized .container-fluid > .row > .sidebar .sidebar-item.active > div > .expander,
 html body.customized .container-fluid > .row > .sidebar .sidebar-item.active > div > .link ,
 html body.customized .container-fluid > .sidebar .sidebar-item.active > div > .expander,
-html body.customized .container-fluid > .sidebar .sidebar-item.active > div > .link  {
+html body.customized .container-fluid > .sidebar .sidebar-item.active > div > .link,
+html body.customized .container > .row > .sidebar .sidebar-item.active > div > .expander,
+html body.customized .container > .row > .sidebar .sidebar-item.active > div > .link ,
+html body.customized .container > .sidebar .sidebar-item.active > div > .expander,
+html body.customized .container > .sidebar .sidebar-item.active > div > .link   {
     background: $theme-color;
 }
 
 html body.customized .container-fluid > .row > .sidebar .sidebar-item h5,
-html body.customized .container-fluid > .sidebar .sidebar-item h5 {
+html body.customized .container-fluid > .sidebar .sidebar-item h5,
+html body.customized .container > .row > .sidebar .sidebar-item h5,
+html body.customized .container > .sidebar .sidebar-item h5 {
     color: $theme-color;
     background-color: $theme-color-orange-weak;
 }

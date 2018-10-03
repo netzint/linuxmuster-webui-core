@@ -141,30 +141,15 @@ body.widescreen-mode-on .container-fluid {
         & > div {
             overflow: hidden;
 
-            @mixin colors() {
-                color: $text-color;
-                text-decoration: none;
-
-                &:hover {
-                    background: #ddd;
-                }
-
-                &:active {
-                    background: #ccc;
-                }
-            }
-
             & > .expander {
                 float: left;
                 display: block;
-                @include colors();
                 line-height: $item-height;
                 padding: 0;
             }
 
             & > .link {
                 display: block;
-                @include colors();
                 line-height: $item-height;
                 padding-left: 20px;
                 padding-right: 20px;

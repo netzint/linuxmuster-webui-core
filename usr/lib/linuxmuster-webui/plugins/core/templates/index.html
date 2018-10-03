@@ -27,81 +27,82 @@
     </head>
     <body class="global-color-{{identity.color || 'default'}} widescreen-mode-{{isWidescreen ? 'off' : 'on'}} {{customization.plugins.core.bodyClass}}">
         <nav class="navbar navbar-expand fixed-top text-white" ng:show="appReady" ng:cloak>
-            <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-phone hide-tablet">
-                <i class="fas fa-bars"></i>
-            </a>
+            <div class="container{{isWidescreen ? '-fluid' : ''}}">
+                <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-phone hide-tablet">
+                    <i class="fas fa-bars"></i>
+                </a>
 
-            <a ng:click="toggleOverlayNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-desktop hide-large">
-                <i class="fas fa-bars"></i>
-            </a>
+                <a ng:click="toggleOverlayNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-desktop hide-large">
+                    <i class="fas fa-bars"></i>
+                </a>
 
-            <a ng:href="{{urlPrefix}}/view/" ng:if="customization.plugins.core.logoURL" class="mx-3">
-                <img ng:src="{{customization.plugins.core.logoURL}}" />
-            </a>
+                <a ng:href="{{urlPrefix}}/view/" ng:if="customization.plugins.core.logoURL" class="mx-3">
+                    <img ng:src="{{customization.plugins.core.logoURL}}" />
+                </a>
 
-            <a ng:href="{{urlPrefix}}/view/" class="collapse navbar-collapse tail">
-                <span class="title mr-1">{{customization.plugins.core.title || 'WebUi'}}</span> 
-                <span ng:if="pageTitle" class="subtitle hide-phone hide-tablet"> &gt; {{pageTitle|translate}}</span>
-            </a>
-            
-            <span class="hide-phone">
-                <i class="far fa-hdd"></i> {{ identity.machine.name }}
-            </span>
-            
-            <div ng:show="identity.user" class="mx-3">
-                <div uib-dropdown>
-                    <a class="btn btn-default profile-button" ng:class="{superuser: identity.isSuperuser}" uib-dropdown-toggle>
-                        {{identity.user[0].toUpperCase()}}
+                <a ng:href="{{urlPrefix}}/view/" class="collapse navbar-collapse tail">
+                    <span class="title mr-1">{{customization.plugins.core.title || 'WebUi'}}</span> 
+                    <span ng:if="pageTitle" class="subtitle hide-phone hide-tablet"> &gt; {{pageTitle|translate}}</span>
+                </a>
+                
+                <span class="hide-phone">
+                    <i class="far fa-hdd"></i> {{ identity.machine.name }}
+                </span>
+                
+                <div ng:show="identity.user" class="mx-3">
+                    <div uib-dropdown>
+                        <a class="btn btn-default profile-button" ng:class="{superuser: identity.isSuperuser}" uib-dropdown-toggle>
+                            {{identity.user[0].toUpperCase()}}
 
-                        <span class="rank" ng:show="identity.isSuperuser">
-                            <i class="fa fa-angle-double-up"></i>
-                        </span>
-                    </a>
-                    <ul uib-dropdown-menu class="dropdown-menu-right" style="width: 200px">
-                        <li>
-                            <div>
-                                <span class="subtle float-right">UID {{ identity.effective }}</span>
-                                <i class="fa fa-fw fa-user"></i> {{ identity.user }}
-                            </div>
-                        </li>
-                        <li class="hide-tablet hide-desktop hide-large">
-                            <div>
-                                <i class="fa fa-fw fa-hdd-o"></i> {{ identity.machine.name }}
-                            </div>
-                        </li>
-                        <li ng:repeat="item in customization.plugins.core.extraProfileMenuItems">
-                            <a href="{{item.url}}">
-                                <i class="fa fa-fw fa-{{item.icon}}"></i> {{ item.name }}
-                            </a>
-                        </li>
-                        <li>
-                            <a ng:click="identity.elevate()" ng:show="identity.effective != 0 && identity.elevation_allowed">
-                                <i class="fa fa-fw fa-angle-double-up"></i> <span translate>Elevate</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a ng:click="identity.logout()">
-                                <i class="fa fa-fw fa-power-off"></i> <span translate>Log out</span>
-                            </a>
-                        </li>
-                    </ul>
+                            <span class="rank" ng:show="identity.isSuperuser">
+                                <i class="fa fa-angle-double-up"></i>
+                            </span>
+                        </a>
+                        <ul uib-dropdown-menu class="dropdown-menu-right" style="width: 200px">
+                            <li>
+                                <div>
+                                    <span class="subtle float-right">UID {{ identity.effective }}</span>
+                                    <i class="fa fa-fw fa-user"></i> {{ identity.user }}
+                                </div>
+                            </li>
+                            <li class="hide-tablet hide-desktop hide-large">
+                                <div>
+                                    <i class="fa fa-fw fa-hdd-o"></i> {{ identity.machine.name }}
+                                </div>
+                            </li>
+                            <li ng:repeat="item in customization.plugins.core.extraProfileMenuItems">
+                                <a href="{{item.url}}">
+                                    <i class="fa fa-fw fa-{{item.icon}}"></i> {{ item.name }}
+                                </a>
+                            </li>
+                            <li>
+                                <a ng:click="identity.elevate()" ng:show="identity.effective != 0 && identity.elevation_allowed">
+                                    <i class="fa fa-fw fa-angle-double-up"></i> <span translate>Elevate</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ng:click="identity.logout()">
+                                    <i class="fa fa-fw fa-power-off"></i> <span translate>Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            
+                <a ng:click="toggleWidescreen()" class="hide-phone hide-tablet">
+                    <i class="fas fa-expand" ng:if="!isWidescreen"></i>
+                    <i class="fa fa-compress" ng:if="isWidescreen"></i>
+                </a>
             </div>
-        
-            <a ng:click="toggleWidescreen()" class="hide-phone hide-tablet">
-                <i class="fas fa-expand" ng:if="!isWidescreen"></i>
-                <i class="fa fa-compress" ng:if="isWidescreen"></i>
-            </a>
-
         </nav>
 
         <div class="container{{isWidescreen ? '-fluid' : ''}}" ng:show="appReady">
             <div class="row">
-                <div class="col-md-2 sidebar hide-tablet hide-phone" ng:show="showSidebar && navigationPresent">
+                <div class="{{isWidescreen ? 'col-md-2' : 'col-md-3'}} sidebar hide-tablet hide-phone" ng:show="showSidebar && navigationPresent">
                     <ng:include src="'/core:resources/partial/sidebarTasks.html'"></ng:include>
                     <core:sidebar></core:sidebar>
                 </div>
-                <div ng:view class="content col-md-10" ng-swipe-right="toggleOverlayNavigation(true)" ng-swipe-left="toggleOverlayNavigation(false)">
+                <div ng:view class="content {{isWidescreen ? 'col-md-10' : 'col-md-9'}}" ng-swipe-right="toggleOverlayNavigation(true)" ng-swipe-left="toggleOverlayNavigation(false)">
                 </div>
             </div>
 
