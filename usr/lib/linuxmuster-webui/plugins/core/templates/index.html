@@ -45,7 +45,7 @@
                 </span> <span class="subtitle hide-phone hide-tablet">{{pageTitle|translate}}</span>
             </a>
                 
-            <p class="pull-right hide-phone">
+            <p class="float-right hide-phone">
                 <i class="far fa-hdd"></i> {{ identity.machine.name }}
             </p>
             
@@ -61,7 +61,7 @@
                     <ul uib-dropdown-menu class="dropdown-menu-right" style="width: 200px">
                         <li>
                             <div>
-                                <span class="subtle pull-right">UID {{ identity.effective }}</span>
+                                <span class="subtle float-right">UID {{ identity.effective }}</span>
                                 <i class="fa fa-fw fa-user"></i> {{ identity.user }}
                             </div>
                         </li>
@@ -121,8 +121,8 @@
                     <input ng:model="$parent.query" ng:model-options="{debounce: 500}" ng:keyup="onSearchboxKeyUp($event)" ng:keydown="onSearchboxKeyDown($event)" type="search" autofocus class="form-control" placeholder="{{'Quick search'|translate}}" />
                     <div class="list-group">
                         <a ng:repeat="result in results|rankMatch:'title|translate':query" ng:href="{{urlPrefix}}{{result.url}}" ng:click="open(result)" class="list-group-item">
-                            <code class="navbox-hotkey pull-right" ng:if="$index < 10 && $index > 0">Shift - {{$index}}</code>
-                            <code class="navbox-hotkey pull-right" ng:if="$index == 0" translate>Enter</code>
+                            <code class="navbox-hotkey float-right" ng:if="$index < 10 && $index > 0">Shift - {{$index}}</code>
+                            <code class="navbox-hotkey float-right" ng:if="$index == 0" translate>Enter</code>
                             <i class="fa fa-fw fa-{{result.icon}}"></i> {{result.title|translate}}
                         </a>
                     </div>
