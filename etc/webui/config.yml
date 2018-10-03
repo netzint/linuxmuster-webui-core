@@ -8,7 +8,7 @@ bind:
   mode: tcp
   port: 8001
 color: red
-language: DE
+language: de
 linuxmuster:
   initialized: false
   is-configured: false
