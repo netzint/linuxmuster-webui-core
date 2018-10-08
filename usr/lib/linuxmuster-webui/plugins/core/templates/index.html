@@ -25,7 +25,7 @@
             }
         </style>
     </head>
-    <body class="global-color-{{identity.color || 'default'}} widescreen-mode-{{isWidescreen ? 'off' : 'on'}} {{customization.plugins.core.bodyClass}}">
+    <body class="global-color-{{identity.color || 'default'}} {{customization.plugins.core.bodyClass}}">
         <nav class="navbar navbar-expand fixed-top text-white" ng:show="appReady" ng:cloak>
             <div class="container{{isWidescreen ? '-fluid' : ''}}">
                 <a ng:click="toggleNavigation()" ng:show="navigationPresent" class="navigation-toggle hide-phone hide-tablet">

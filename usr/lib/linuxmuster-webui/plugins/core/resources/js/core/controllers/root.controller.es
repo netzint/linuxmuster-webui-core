@@ -55,7 +55,7 @@ angular.module('core').controller('CoreRootController', function($scope, $rootSc
 
     // ---
 
-    $scope.isWidescreen = angular.isDefined($localStorage.isWidescreen) ? $localStorage.isWidescreen : false
+    $scope.isWidescreen = angular.isDefined($localStorage.isWidescreen) ? $localStorage.isWidescreen : true
 
     $scope.toggleWidescreen = function(state) {
         if (angular.isDefined(state)) {
