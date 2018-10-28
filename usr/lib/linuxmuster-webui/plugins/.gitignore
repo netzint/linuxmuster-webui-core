@@ -4,6 +4,9 @@
 .bowerrc
 resources/build
 resources/vendor
+*node_modules*
+*lm_*
+*lmn_*
 */resources/build
 */resources/vendor
 */locale/*/LC_MESSAGES/app.js
