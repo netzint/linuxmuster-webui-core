@@ -38,16 +38,6 @@ class BaseHttpHandler(object):
         :type  http_context: :class:`wu.http.HttpContext`
         """
 
-
-@interface
-class HttpMiddleware(BaseHttpHandler):
-    def __init__(self, context):
-        self.context = context
-
-    def handle(self, http_context):
-        pass
-
-
 @interface
 class HttpPlugin(object):
     """
