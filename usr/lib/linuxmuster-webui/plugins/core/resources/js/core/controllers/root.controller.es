@@ -1,9 +1,9 @@
-angular.module('core').controller('CoreRootController', function($scope, $rootScope, $location, $localStorage, $log, $timeout, $q, identity, customization, urlPrefix, webuiPlugins, webuiVersion, webuiPlatform, webuiPlatformUnmapped, favicon, feedback, locale, config) {
+angular.module('core').controller('CoreRootController', function($scope, $rootScope, $location, $localStorage, $log, $timeout, $q, identity, customization, urlPrefix, webuiPlugins, webuiVersion, webuiPlatform, webuiPlatformUnmapped, favicon, locale, config) {
     $rootScope.identity = identity;
     $rootScope.$location = $location;
     $rootScope.location = location;
     $rootScope.urlPrefix = urlPrefix;
-    $rootScope.feedback = feedback;
+    //$rootScope.feedback = feedback;
     $rootScope.webuiVersion = webuiVersion;
     $rootScope.webuiPlugins = webuiPlugins;
     $rootScope.customization = customization;
@@ -22,7 +22,7 @@ angular.module('core').controller('CoreRootController', function($scope, $rootSc
 
     $scope.navigationPresent = $location.path().indexOf('/view/login') === -1;
 
-    feedback.init();
+    //feedback.init();
 
     // ---
 
@@ -50,7 +50,7 @@ angular.module('core').controller('CoreRootController', function($scope, $rootSc
 
     $scope.$on('$routeChangeSuccess', function() {
         $scope.toggleOverlayNavigation(false)
-        feedback.emit('navigation', {url: $location.path()});
+        //feedback.emit('navigation', {url: $location.path()});
     })
 
     // ---
